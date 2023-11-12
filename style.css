@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+
+/* Small devices such as large phones (640px and up) */
+@media only screen and (max-width: 600px) 
+{
+    .container{
+        display: grid;
+        grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+        grid-template-rows: 20vh 80vh 10vh;
+        gap: 1em;
+        grid-template-areas:
+        "header"
+        "main"
+        "footer";
+        min-height: 100vh;
+    }
+
+    header{
+        grid-area: header;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "logo . openNav";
+    }
+    
+    nav{
+
+        grid-template-rows: 10vh 80vh 10vh;
+
+    }
+    .sideBar{
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: rgb(247, 173, 59);
+        overflow-x: hidden;
+        transition: all 800ms cubic-bezier(0.835, 0.035, 0.765, 0.680);
+    }
+
+    nav{
+        display: grid;
+        grid-template-rows: 10vh 80vh 10vh;
+        grid-template-areas: 
+        "head"
+        "Links"
+        "Foot"
+        ;
+    }
+    nav ul{
+        grid-area: Links;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }    
+    
+    .openbtn {
+        grid-area: openNav;
+        width: max-content;
+        height: max-content;
+        margin: 0 0 0 auto;
+        font-size: 30px;
+        cursor: pointer;
+        color: black;
+        border: none;
+    }
+
+    .sideBar li a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: white;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sideBar_Container{
+        grid-area: head;
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-areas: '. img img img . . . close . .';
+
+        align-items: center;
+        text-align: center;
+    }
+
+    div .closebtn {
+        justify-items: center;
+        grid-area: close;
+        font-size: 40px;
+        font-weight: bold;
+        text-decoration: none;
+        color: white;
+    }
+    div img{
+        justify-items: left;
+        grid-area: img;
+    }
+
+}
+@media only screen and (min-width: 600px) 
+{
+
+}
+/* Medium devices such as tablets (768px and up) */
+@media only screen and (min-width: 768px)
+{
+
+}
+
+/* Large devices such as laptops (1024px and up) */
+@media only screen and (min-width: 1024px)
+{
+
+}
+
+/* Largest devices such as desktops (1280px and up) */
+@media only screen and (min-width: 1440px)
+{
+}
