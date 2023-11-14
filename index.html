@@ -6,39 +6,69 @@
     <title>Pizzeria</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/menu-left-alt.css' rel='stylesheet'>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
-    <div class="container" id="container">
-        <header>
-            
-            <nav class="sideBar" id="SideBar">
+    <div class="nav-overlay"></div>
+    <header class="grid">
+        <i class="fa-solid fa-bars menu" onclick="openMenu()"></i>
+        <h1>Pizzeria</h1>
+        <nav id="sideMenu">
+            <a href="#">Order Here</a>
+            <a href="#">Our Pizzas</a>
+            <a href="#">Here We Are</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+        </nav>
 
-                <div class="sideBar_Container">
-                    <img src="logo.png" alt="">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
-                    
-                    
-                </div>
-                <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Our Pizzas</a></li>
-                    <li><a href="#">Here We Are</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Order Here</a></li>
-                </ul>
+        <div class="account">
+            <i class="fa-solid fa-magnifying-glass searchBtn" onclick="openSearch()" ></i>
+            <input type="text" name="search" placeholder="Search.." style="display: none;" id="searchInput" autofocus>
+            <i class="fa-solid fa-user user"></i>
+            <i class="fa-solid fa-cart-shopping shop"></i>
+        </div>
+    </header>
 
-            </nav>
-            <a class="openbtn" onclick="openMenu()">&#9776;</a>
-        </header>
+    <main class="grid">
+        <h1>Pizzeria</h1>   
+        <div class="card">
+            <img src="pizza_image.jpg" alt="Delicious Pizza">
+            <div class="card-content">
+              <h2>Pizza Name</h2>
+              <p>Delicious pizza with the finest ingredients.</p>
+              <p class="price">$10.99</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="pizza_image.jpg" alt="Delicious Pizza">
+            <div class="card-content">
+              <h2>Pizza Name</h2>
+              <p>Delicious pizza with the finest ingredients.</p>
+              <p class="price">$10.99</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="pizza_image.jpg" alt="Delicious Pizza">
+            <div class="card-content">
+              <h2>Pizza Name</h2>
+              <p>Delicious pizza with the finest ingredients.</p>
+              <p class="price">$10.99</p>
+            </div>
+        </div>
+    </main>
 
-        <main>
-            hello
-        </main>
-
-        <footer>
-            bye
-        </footer>   
-    </div>
+    <footer class="grid">
+    </footer>  
+    <div class="nav-menu-mobile">
+        <nav id="sideMenu">
+            <a href="#">Order Here</a>
+            <a href="#">Our Pizzas</a>
+            <a href="#">Here We Are</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+        </nav>
+    </div> 
 </body>
 <script src="index.js"></script>
+<script src="https://kit.fontawesome.com/d7008077ec.js" crossorigin="anonymous"></script>
 </html>
