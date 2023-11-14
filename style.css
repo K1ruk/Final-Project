@@ -3,126 +3,157 @@
 *{
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
-
+    color: #1a1e1b;
 }
 
+body{
+    margin: 0;
+    background: #fdfaf3;
+}
+
+.container{
+
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+}
+
+header{
+    padding: 10px 40px;
+}
+header > .menu{
+    display: none;
+}
+header > h1{
+    grid-column: span 2;
+}
+header > nav{
+    grid-column: span 8;
+    justify-self: center;
+    align-self: center;
+}
+header > nav > a{
+    margin-right: 10px;
+    font-size: 21px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #1a1e1b;
+    user-select: none;
+    padding: 10px;
+}
+header > nav > a:hover{
+    position: relative; 
+    top: -5px;
+    color: #d92730;
+}
+
+header > .account{
+    grid-column: span 2;
+    justify-self: end;
+    align-self: center;
+}
+header > .account >.searchBtn{
+    margin-right: none;
+    font-size: 25px;
+}
+header > .account >.user{
+    margin-left: 10px;
+}
+header > .account >.user, .shop{
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+header > .account > input{
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: #fdfaf3;
+}
+header > .account > input:focus{
+    outline: none !important;
+    border-color: #1a1e1b;
+    box-shadow: 0 0 10px #1a1e1b;
+
+    transition: 0.4s ease-in-out;
+}
+header > .account > input::placeholder{
+    font-style: italic;
+    padding-left: 5px;
+}
+
+main > h1{
+    grid-column: span 12;
+    justify-self: center;
+    align-self: center;
+
+}
+main{
+    margin: 60px auto;
+    padding: 20px;
+}
+main > .card{
+    grid-column: span 4;
+    justify-self: center;
+    box-shadow: 3px 3px 3px (rgba(0,0,0,0.05));
+    border-radius: 8px;
+    background: #fff;
+}
+
+main > .card > img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+main > .card > .card-content {
+    padding: 16px;
+}
+
+.nav-menu-mobile{
+    display: none;
+}
 
 /* Small devices such as large phones (640px and up) */
 @media only screen and (max-width: 600px) 
 {
-    .container{
-        display: grid;
-        grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
-        grid-template-rows: 20vh 80vh 10vh;
-        gap: 1em;
-        grid-template-areas:
-        "header"
-        "main"
-        "footer";
-        min-height: 100vh;
+    .grid{
+        gap: 0;
     }
-
     header{
-        grid-area: header;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: "logo . openNav";
-    }
-    
-    nav{
-
-        grid-template-rows: 10vh 80vh 10vh;
-
-    }
-    .sideBar{
-        height: 100%;
-        width: 0;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        right: 0;
-        background-color: rgb(247, 173, 59);
-        overflow-x: hidden;
-        transition: all 800ms cubic-bezier(0.835, 0.035, 0.765, 0.680);
-    }
-
-    nav{
-        display: grid;
-        grid-template-rows: 10vh 80vh 10vh;
-        grid-template-areas: 
-        "head"
-        "Links"
-        "Foot"
-        ;
-    }
-    nav ul{
-        grid-area: Links;
-        list-style-type: none;
-        margin: 0;
         padding: 0;
-    }    
-    
-    .openbtn {
-        grid-area: openNav;
-        width: max-content;
-        height: max-content;
-        margin: 0 0 0 auto;
-        font-size: 30px;
-        cursor: pointer;
-        color: black;
-        border: none;
-    }
-
-    .sideBar li a {
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
-        font-size: 25px;
-        color: white;
+    }  
+    header > .menu{
         display: block;
-        transition: 0.3s;
+        grid-column: span 2;
+        justify-self: center;
+        align-self: center;
+        font-size: 25px;
+    }
+    header > h1{
+        grid-column: 4 / span 6;
+        justify-self: center;
+    }
+  
+    header > nav{
+        display: none;
+    }
+    header > .account{
+        grid-column: span 3;
+    }
+    header > .account > .user{
+        display: none;
+    }
+    main{
+        margin: 0;
+        padding: 0 20px 0 20px;
+    }
+    main > .card{
+        grid-column: span 12;
+        margin-bottom: 10px;
     }
 
-    .sideBar_Container{
-        grid-area: head;
-        display: grid;
-        grid-template-columns: repeat(9, 1fr);
-        grid-template-areas: '. img img img . . . close . .';
-
-        align-items: center;
-        text-align: center;
-    }
-
-    div .closebtn {
-        justify-items: center;
-        grid-area: close;
-        font-size: 40px;
-        font-weight: bold;
-        text-decoration: none;
-        color: white;
-    }
-    div img{
-        justify-items: left;
-        grid-area: img;
-    }
-
-}
-@media only screen and (min-width: 600px) 
-{
-
-}
-/* Medium devices such as tablets (768px and up) */
-@media only screen and (min-width: 768px)
-{
-
 }
 
-/* Large devices such as laptops (1024px and up) */
-@media only screen and (min-width: 1024px)
-{
 
-}
-
-/* Largest devices such as desktops (1280px and up) */
-@media only screen and (min-width: 1440px)
-{
-}
