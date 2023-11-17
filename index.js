@@ -1,20 +1,18 @@
-function openMenu() {
-    var y = document.getElementById("sideMenu");
+var myElement = document.getElementById('nav-menu-mobile');
+var addButton = document.getElementById('menu');
 
-    if (y.style.display === "none")
-    {
-      y.style.display = "block";
-    } 
-    
-    else {
-      y.style.display = "none";
-    }
-  }
-  
-  /* Set the width of the sidebar to 0 (hide it) */
-  function closeMenu() {
-    document.getElementById("SideBar").style.width = "0";
-  }
+// Add an event listener to the menu button
+addButton.addEventListener('click', function() {
+
+  // Add both nav-menu-mobile and nav-menu-mobile-active to the existing classes when the button is clicked
+  myElement.classList.add('nav-menu-mobile-active');
+});
+
+
+function closeMenu() {
+  myElement.classList.remove('nav-menu-mobile-active');
+}
+
 
 function openSearch()
 {
