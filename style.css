@@ -187,6 +187,7 @@ header > .account > input::placeholder{
         }
 
     header > .account >.shop{
+        margin-right: 10px;
         font-size: 25px;
     }
     header > .account >.searchBtn{
