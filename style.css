@@ -187,6 +187,7 @@ header > .account > input::placeholder{
         }
 
     header > .account >.shop{
+        margin-right: 10px;
         font-size: 25px;
     }
     header > .account >.searchBtn{
@@ -221,11 +222,10 @@ header > .account > input::placeholder{
         row-gap:60px;
     }
     .nav-menu-mobile > .inside > .closeBtn{
-        margin-left: 5px;
         margin-top: 25px;
         grid-column: 2;
         font-size: 35px;
-        justify-self: center;
+        justify-self: left;
         align-items: center;
     }  
 
