@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
+body, html{
+    height: 100%;
+}
+
+.bg{
+    background-image: url(Background.png);
+    min-height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 *{
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
@@ -11,26 +22,56 @@ body{
     background: #fdfaf3;
 }
 
-.container{
-
-}
 .grid{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: 30px;
+}
+
+main{
+    min-height: 100%;
+    justify-content: space-evenly;
+}
+
+main > h1{
+    font-size: 5.75vw;
+    grid-column: span 12;
+    justify-self: center;
+    align-self: center;
+
+}
+section{
+    margin-top: 60px;
+}
+section > .card{
+    grid-column: span 4;
+    justify-self: center;
+    box-shadow: 3px 3px 3px (rgba(0,0,0,0.05));
+    border-radius: 8px;
+    background: #fff;
+}
+
+section > .card > img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+section > .card > .card-content {
+    padding: 16px;
 }
 
 header{
-    padding: 10px 40px;
+    padding: 10px 15px;
+    grid-column: span 12;
 }
 header > .menu{
     display: none;
 }
 header > h1{
-    grid-column: span 3;
+    grid-column: span 2;
 }
 header > nav{
-    grid-column: span 6;
+    grid-column: 4 / span 6;
     justify-self: center;
     align-self: center;
 }
@@ -51,18 +92,16 @@ header > nav > a:hover{
 
 header > .account{
     grid-column: span 3;
-    justify-self: end;
+    justify-self: right;
     align-self: center;
 }
-header > .account >.searchBtn{
-    margin-right: none;
+header > .account >.searchBtn, .user{
+    margin-right: 10px;
     font-size: 25px;
 }
-header > .account >.user{
-    margin-left: 10px;
-}
-header > .account >.user, .shop{
-    margin-right: 10px;
+
+header > .account >.shop{
+    margin-right: 0;
     font-size: 25px;
 }
 
@@ -82,58 +121,61 @@ header > .account > input::placeholder{
     font-style: italic;
     padding-left: 5px;
 }
-
-main > h1{
-    grid-column: span 12;
-    justify-self: center;
-    align-self: center;
-
-}
-main{
-    margin: 60px auto;
-    padding: 20px;
-}
-main > .card{
-    grid-column: span 4;
-    justify-self: center;
-    box-shadow: 3px 3px 3px (rgba(0,0,0,0.05));
-    border-radius: 8px;
-    background: #fff;
-}
-
-main > .card > img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-main > .card > .card-content {
-    padding: 16px;
-}
-
 .nav-menu-mobile{
     display: none;
 }
 
-/* Small devices such as large phones (640px and up) */
-@media only screen and (max-width: 600px) 
+
+@media (max-width: 1024px)
+{
+    header > nav > a {
+        padding: 5px;
+        margin: 0;
+        font-size: 16px;
+    }
+
+    header > nav > a:first-child{
+        padding-left: 0;
+    }
+    header > nav > a:last-child{
+        padding-right: 0;
+    }
+    header > .account{
+        margin: 0;
+    }
+    header > .account > .user{
+        font-size: 18px;
+    }
+    header > .account >.shop{
+        font-size: 18px;
+    }
+    header > .account >.searchBtn{
+        font-size: 18px;
+    }
+
+    
+}
+
+@media (max-width: 768px) 
 {
     .grid{
         gap: 0;
     }
     header{
         padding: 0;
+        justify-items: center;
     }  
     header > .menu{
         display: block;
         grid-column: span 2;
         justify-self: center;
         align-self: center;
-        font-size: 25px;
+        font-size: 35px;
     }
     header > h1{
         grid-column: 4 / span 6;
         justify-self: center;
+        align-self: center;
     }
   
     header > nav{
@@ -141,19 +183,93 @@ main > .card > .card-content {
     }
     header > .account{
         grid-column: span 3;
+        align-self: center;
+        }
+
+    header > .account >.shop{
+        font-size: 25px;
     }
+    header > .account >.searchBtn{
+        font-size: 25px;
+    }
+
     header > .account > .user{
         display: none;
     }
-    main{
+    section{
         margin: 0;
-        padding: 0 20px 0 20px;
+        padding: 20px 10px 0 10px;
     }
-    main > .card{
+    section > .card{
         grid-column: span 12;
         margin-bottom: 10px;
     }
 
+    .nav-menu-mobile{
+        display: block;
+        width: 90%;
+        height: 100%;
+        background: #fff;
+        position: fixed;
+        top: 0px;
+        left: -90%;
+        z-index: 999;
+        transition: all 750ms cubic-bezier(0.85, 0, 0.15, 1);
+    }
+
+    .inside{
+        row-gap:60px;
+    }
+    .nav-menu-mobile > .inside > .closeBtn{
+        margin-left: 5px;
+        margin-top: 25px;
+        grid-column: 2;
+        font-size: 35px;
+        justify-self: center;
+        align-items: center;
+    }  
+
+    .mobile-nav-logo{
+        width: auto;
+        height: 50px;
+        position: absolute;
+        right: 10%;
+    }
+
+    .nav-menu-mobile > .inside > .sideMenu{
+        grid-column: 2 / span 11;
+    }
+    
+    .nav-menu-mobile > .inside > .sideMenu > a{
+        display: block;
+        font-weight: 700;
+        font-size: 40px;
+        text-decoration: none;
+    }
+    .nav-menu-mobile-active {
+        left: 0%;
+    }
 }
 
 
+
+
+/* width */ 
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
