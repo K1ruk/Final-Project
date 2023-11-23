@@ -33,7 +33,7 @@ main{
 }
 
 main > h1{
-    font-size: 5.75vw;
+    font-size: 10vw;
     grid-column: span 12;
     justify-self: center;
     align-self: center;
