@@ -1,0 +1,146 @@
+    body{
+        background-color: bisque;
+        margin: 0;
+    }
+    /*Container of all elements*/
+    .container{
+        display: grid;
+        grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+        grid-template-rows: 10vh 80vh 10vh;
+        gap: 1em;
+        grid-template-areas:
+        "header"
+        "main"
+        "footer";
+        min-height: 100vh;
+    }
+
+    /*Main Header*/
+    header{
+        grid-area: header;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "logo . openbtn";
+        background-color: aqua;
+        align-items: center;
+        justify-items: center;
+
+    }
+
+    /*Side navigation bar*/
+    nav{        
+        display: grid;
+        grid-template-rows: 10vh 80vh 10vh;
+        grid-template-areas: 
+        "sideBar_header"
+        "sideBar_links"
+        "sideBar_footer";
+        overflow: hidden;
+
+        position: fixed;
+        height: 100%;
+        width: 0;
+        z-index: 1; /*To stay on top of every element*/
+        top: 0;
+        right: 0;
+        background-color: rgb(247, 173, 59);
+
+        /*Opening transition*/
+        transition: all 800ms cubic-bezier(0.835, 0.035, 0.765, 0.680);        
+    }
+
+    /*Hamburger Menu Button*/
+    #openbtn {
+        position: fixed;
+        right: 25px;
+        grid-area: openbtn;
+        margin: 0 0 0 auto;
+        font-size: 30px;
+        cursor: pointer;
+        color: black;
+        border: none;
+    }
+
+    /*Close button*/
+    #closebtn {
+        grid-area: close;
+        font-size: 30px;
+        text-decoration: none;
+        color: white;
+    }
+
+    .sideBar li a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: white;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sideBar_Header{
+        grid-area: sideBar_header;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: 'img img . . close .';
+        justify-items: center;
+        align-items: center;
+    }
+
+    .sideBar_logo{
+        grid-area: img;
+    }
+
+    nav ul{
+        grid-area: sideBar_links;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }  
+
+    .sideBar_Links{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-areas: "sideBar_links sideBar_links sideBar_links sideBar_links sideBar_links sideBar_links sideBar_links . . . . .";
+    }
+    .sideBar_Footer{
+        grid-area: sideBar_footer;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        display: grid;
+        grid-template-areas:
+        "footer_head"
+        "footer_location"
+        ;
+    }
+
+
+    <nav class="sideBar" id="SideBar">
+
+    <!--Header inside sideBar-->
+    <div class="sideBar_Header">
+        <img src="logo.png" alt="Pizzeria_logo" class="sideBar_logo">
+        <i class="fa-solid fa-xmark" style="color: #ffffff;" href="javascript:void(0)" id="closebtn" onclick="closeMenu()"></i>
+    </div>
+
+    <!--Links inside sideBar-->
+    <div class="sideBar_Links">
+
+        <!--list inside sideBar-->
+        <ul>
+            <li><a href="#">Order Here</a></li>
+            <li><a href="#">Our Pizzas</a></li>
+            <li><a href="#">Here We Are</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <!--Footer inside sideBar-->
+    <div class="sideBar_Footer">
+        <b>Head Office</b>
+        <a href="http://maps.app.goo.gl/2QtsVzduM9zAdWx78">Gjuterigatan 5, 553 18 Jönköping</a>
+        <p><strong>Email:</strong> <a href="mailto:oyunnyam.oyunbayar@yahoo.com">oyunnyam.oyunbayar@yahoo.com</a></p>
+    </div>
+</nav>
+<i class="fa-solid fa-bars" id="openbtn" onclick="openMenu()"></i>
