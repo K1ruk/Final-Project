@@ -53,8 +53,13 @@ main > img{
     grid-column: span 12;
     justify-self: center;
     align-self: center;
-
 }
+main > p{
+    grid-column: 3 / span 8;
+    justify-self: center;
+    color: white;
+}
+
 main > nav > a{
     margin-top: 25vh;
     grid-column: span 12;
@@ -193,7 +198,12 @@ section > .list > .card > .card-content > button{
     border-radius: 20px;
     border: 0;
     padding: 10px 20px;
-
+}
+section > .list > .card > .card-content > button:hover{
+    cursor: pointer;
+    padding-left: 25px;
+    padding-right: 25px;
+    transition: 0.2s;
 }
 
 section > .list > .card > .card-content > input[type="number"]{
@@ -205,6 +215,16 @@ section > .list > .card > .card-content > .card-title > h2{
     font-family: 'Aguafina Script', cursive;
 }
 
+.cart-indicator {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    background-color: gray;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-size: 12px;
+}
 
 @media (max-width: 1440px){
     header > nav > a {
@@ -215,6 +235,10 @@ section > .list > .card > .card-content > .card-title > h2{
 }
 @media (max-width: 1024px)
 {
+    .cart-indicator{
+        top: 5px;
+        font-size: 10px;
+    }
     main > img{
         width: 70vw ;
     }
@@ -366,7 +390,15 @@ section > .list > .card > .card-content > .card-title > h2{
     }
 } 
 
-
+@media (max-width: 320px){
+    section > .list{
+        grid-column: span 12;   
+    }
+    section > .list > .card{
+        grid-column: span 12;
+        margin-bottom: 10px;
+    }
+}
 
 
 /* width */ 

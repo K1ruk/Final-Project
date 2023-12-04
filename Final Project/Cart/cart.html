@@ -16,7 +16,7 @@
                 <i class="fa-solid fa-bars menu" id="menu"></i>
                 <a href="/Index/index.html"><img src="/images/Logo.svg" alt="la napolitana" srcset=""></a>
                 <nav id="Menu">
-                    <a href="#">Order Here</a>
+                    <a href="/Index/index.html">Home</a>
                     <a href="#">Our Pizzas</a>
                     <a href="#">Here We Are</a>
                     <a href="#">About Us</a>
@@ -40,8 +40,12 @@
                 <b class="total">Total</b>
             </div>
 
-            <div>
-                <h1 id="newTitle"></h1>
+            <div id="cart-content" class="grid">
+            </div>
+
+            <div class="empty" >
+                <input type="number"><button>Add Coupon</button>
+                <button onclick="empty()">Empty cart</button>
             </div>
         </section>
 
@@ -62,7 +66,7 @@
         </div>
     </div>
 </body>
-<script src="/Cart/cart.js"></script>
+<script src="/Index/index.js"></script>
 <script src="https://kit.fontawesome.com/d7008077ec.js" crossorigin="anonymous"></script>
 
 </html>

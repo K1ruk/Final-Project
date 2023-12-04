@@ -19,8 +19,8 @@
             <i class="fa-solid fa-bars menu" id="menu"></i>
             <a href="/Index/index.html"><img src="/images/Logo.svg" alt="la napolitana" srcset=""></a>
             <nav id="Menu">
-                <a href="#">Order Here</a>
-                <a href="#section">Our Pizzas</a>
+                <a href="/Index/index.html">Home</a>
+                <a href="/Our Pizzas/our_pizzas.html">Our Pizzas</a>
                 <a href="#">Here We Are</a>
                 <a href="#">About Us</a>
                 <a href="#">Contact</a>
@@ -30,12 +30,15 @@
                 <a class="searchBtn"><i class="fa-solid fa-magnifying-glass" onclick="openSearch()" ></i></a>
                 <input type="text" name="search" placeholder="Search.." style="display: none;" id="searchInput" autofocus>
                 <a class="user"><i class="fa-solid fa-user "></i></a>
-                <a class="shop" href="/Cart/cart.html" onclick="cartClicked()"><i class="fa-solid fa-cart-shopping "></i></a>
+                <a class="shop" href="/Cart/cart.html" onclick="cartClicked()">
+                    <i class="fa-solid fa-cart-shopping "></i>
+                    <div class="cart-indicator" id="cart-indicator">0</div>
+                </a>
             </div>
         </header>
 
         <img src="/images/Logo.svg" alt="la napolitana" srcset=""> 
-        <h1></h1>
+        <p>Indulge your senses in an authentic Italian experience at La Napolitana, where passion meets perfection in every slice. Nestled in the heart of flavor, our pizzeria is a haven for pizza enthusiasts seeking the true taste of Naples.</p>
         </main>
     </div> 
 
@@ -51,7 +54,6 @@
                     </div>
 
                     <p><b>Toppings:</b> </p>
-
                     <b class="price">169:-</b>
                     
                     <input type="number" class="count" min="1" value="1">
