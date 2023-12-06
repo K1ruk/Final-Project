@@ -83,16 +83,17 @@ header > nav{
 header > nav > a{
     margin-right: 10px;
     font-size: 21px;
-    font-weight: 700;
+    font-weight: bold;
     text-decoration: none;
     color: #1a1e1b;
     user-select: none;
     padding: 10px;
+
 }
 header > nav > a:hover{
-    position: relative; 
-    top: -5px;
+    transition: 0.2s;
     color: #d92730;
+    
 }
 
 header > .account{
@@ -225,6 +226,8 @@ section > .list > .card > .card-content > .card-title > h2{
     border-radius: 50%;
     font-size: 12px;
 }
+
+
 
 @media (max-width: 1440px){
     header > nav > a {

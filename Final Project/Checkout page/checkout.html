@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzeria</title>
+    <link rel="stylesheet" href="/Checkout page/checkout.css" async>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/menu-left-alt.css' rel='stylesheet'>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="icon" href="pizza_logo.png">
+</head>
+<body>  
+        <main class="grid">
+
+        <div class="nav-overlay"></div>
+
+        <header class="grid">
+            <i class="fa-solid fa-bars menu" id="menu"></i>
+            <a href="/Index/index.html"><img src="/images/Logo.svg" alt="la napolitana" srcset=""></a>
+            <nav id="Menu">
+                <a href="/Index/index.html">Home</a>
+                <a href="/Our Pizzas/our_pizzas.html">Our Pizzas</a>
+                <a href="#">Find Us Here</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+            </nav>
+
+            <div class="account">
+                <a class="searchBtn"><i class="fa-solid fa-magnifying-glass" onclick="openSearch()" ></i></a>
+                <input type="text" name="search" placeholder="Search.." style="display: none;" id="searchInput" autofocus>
+                <a class="user"><i class="fa-solid fa-user "></i></a>
+                <a class="shop" href="/Cart/cart.html" onclick="cartClicked()">
+                    <i class="fa-solid fa-cart-shopping "></i>
+                    <div class="cart-indicator" id="cart-indicator">0</div>
+                </a>
+            </div>
+        </header>
+        </main>
+
+        <section>
+            <h1>Checkout</h1>
+        </section>
+</body>
+
+<script src="/Index/index.js"></script>
+<script src="https://kit.fontawesome.com/d7008077ec.js" crossorigin="anonymous"></script>
+</html>
