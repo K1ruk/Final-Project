@@ -83,17 +83,16 @@ header > nav{
 header > nav > a{
     margin-right: 10px;
     font-size: 21px;
-    font-weight: bold;
+    font-weight: 700;
     text-decoration: none;
     color: #1a1e1b;
     user-select: none;
     padding: 10px;
-
 }
 header > nav > a:hover{
-    transition: 0.2s;
+    position: relative; 
+    top: -5px;
     color: #d92730;
-    
 }
 
 header > .account{
@@ -226,8 +225,6 @@ section > .list > .card > .card-content > .card-title > h2{
     border-radius: 50%;
     font-size: 12px;
 }
-
-
 
 @media (max-width: 1440px){
     header > nav > a {
@@ -394,7 +391,7 @@ section > .list > .card > .card-content > .card-title > h2{
 } 
 
 @media (max-width: 320px){
-    section > .list{
+    section > .list{ 
         grid-column: span 12;   
     }
     section > .list > .card{

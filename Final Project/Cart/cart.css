@@ -131,7 +131,6 @@ main > section > .listCart > .item{
     grid-column: span 6;
 }
 .price, .quantity, .total{
-    align-self: center;
     grid-column: span 2;
 }
 .total{
@@ -160,34 +159,23 @@ section > #cart-content > h1{
     justify-self: center;
 }
 
-section > .buttons{
+section > .empty{
     padding-top: 10px;
     grid-column: span 12;
     border-top: thin solid #1a1e1b;
-    column-gap: 10px;
 }
 
-section > .buttons > button{
+section > .empty > button{
     border-radius: 20px;
     border: none;
     padding: 8px 10px;
     background-color: #1a1e1b;
     color: white;
     cursor: pointer;
-    grid-column: span 1;
 
 }
-section > .buttons > .payment{
-    padding: 8px 10px;
-    grid-column: 11 / span 2 ;
-}
-section > .buttons > .payment:hover{
-    background-color: #555;
-    transition: 0.2s;
-}
 
-
-section > .buttons > input{
+section > .empty > input{
     border-radius: 15px;
     padding: 5px 15px;
     margin-right: 5px;
@@ -286,21 +274,6 @@ section > .buttons > input{
         display: none;
     }
 
-    
-    section > .buttons{
-        row-gap: 10px;
-    }
-    section > .buttons > input{
-        grid-column: 2 / span 7;
-    }
-    section > .buttons > .coupon{
-        grid-column: span 3;
-    }
-
-    section > .buttons > .button{
-        grid-column: 2 / span 10;
-    }
-
 
     .nav-menu-mobile{
         display: block;
@@ -352,21 +325,6 @@ section > .buttons > input{
         grid-column: span 12;
         margin-bottom: 10px;
     }
-        
-    section > .buttons{
-        row-gap: 10px;
-    }
-    section > .buttons > input{
-        grid-column: span 8;
-    }
-    section > .buttons > .coupon{
-        grid-column: span 4;
-    }
-
-    section > .buttons > .button{
-        grid-column: span 12;
-    }
-
 } 
 
 
