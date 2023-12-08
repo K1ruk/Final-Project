@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="/Cart/cart.css">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/menu-left-alt.css' rel='stylesheet'>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="icon" href="/images/pizza_logo.png">
+
+</head>
+<body>
+    <header class="grid">
+        <i class="fa-solid fa-bars menu" id="menu"></i>
+        <a href="/Index/index.html"><img src="/images/Logo.svg" alt="la napolitana" srcset=""></a>
+        <nav id="Menu">
+            <a href="/Index/index.html">Home</a>
+            <a href="/Our Pizzas/our_pizzas.html">Our Pizzas</a>
+            <a href="/About Us/about us.html">About Us</a>
+            <a href="/Contact/contact.html">Contact</a>
+        </nav>
+        <div class="account">
+            <a class="searchBtn">
+                <input type="text" name="search" placeholder="Search.." style="display: none;" id="searchInput" autofocus>
+                <i class="fa-solid fa-magnifying-glass" onclick="openSearch()" ></i>
+            </a>
+            <a class="user"><i class="fa-solid fa-user "></i></a>
+            <a class="shop" href="/Cart/cart.html" onclick="cartClicked()">
+                <i class="fa-solid fa-cart-shopping "></i>
+                <div class="cart-indicator" id="cart-indicator">0</div>
+            </a>
+        </div>        
+    </header>
+
+    <main class="grid">
+        <section class="grid cart">
+            <h1>Your cart</h1>
+            <div class="grid listCart">
+                <b class="item">Item</b>
+                <b class="price">Price</b>
+                <b class="quantity">Quantity</b>
+                <b class="subtotal">Subtotal</b>
+            </div>
+
+            <div id="cart-content" class="grid">
+            </div>
+
+            
+            <div class="buttons grid">
+                <input type="number"><button class="coupon">Add Coupon</button>
+                <button onclick="empty()" class="button">Empty cart</button>
+                <button class="button payment" onclick="checkout()">Check Out</button>
+                <p id="danger"><i class="fa-solid fa-circle-exclamation"></i> You have to purchase before checkout</p>
+            </div>
+            
+        </section>
+    </main>            
+    <footer class="grid">
+        <div class="location">
+            <h1>Find us</h1>
+            <a href="https://www.google.com/maps/place/J%C3%B6nk%C3%B6ping+University/@57.7785714,14.1592945,17z/data=!4m16!1m9!3m8!1s0x465a6deb8c8d3f63:0xaa4ecd2380a8ed79!2sJ%C3%B6nk%C3%B6ping+University!8m2!3d57.7785686!4d14.1618694!9m1!1b1!16zL20vMDlxdjFu!3m5!1s0x465a6deb8c8d3f63:0xaa4ecd2380a8ed79!8m2!3d57.7785686!4d14.1618694!16zL20vMDlxdjFu?entry=ttu" target=”_blank” >Gjuterigatan 5, 553 18 Jönköping</a>
+        </div>
+        <div class="socials">
+            <h1>Social Media</h1>
+            <a href="http://Facebook.com" target="_blank">
+                <i class="fa-brands fa-facebook">facebook</i>
+            </a>
+            <a href="http://instagram.com" target="_blank">
+                <i class="fa-brands fa-instagram">Instagram</i>
+            </a>
+        </div>
+        <div class="img">
+            <a href="/Index/index.html">
+                <img src="/images/Logo.svg" alt="" srcset="">
+            </a>
+        </div>
+    </footer>
+    </div>
+    <div class="grid nav-menu-mobile" id="nav-menu-mobile">
+        <div class="grid inside">
+            <i class="fa-solid fa-xmark closeBtn" onclick="closeMenu()"></i>
+            
+            <nav class="sideMenu">
+                <a href="/Index/index.html">Home</a>
+                <a href="/Our Pizzas/our_pizzas.html">Our Pizzas</a>
+                <a href="/About Us/about us.html">About Us</a>
+                <a href="/Contact/contact.html">Contact</a>
+            </nav>
+        </div>
+    </div>
+</body>
+<script src="/Index/index.js"></script>
+<script src="https://kit.fontawesome.com/d7008077ec.js" crossorigin="anonymous"></script>
+
+</html>

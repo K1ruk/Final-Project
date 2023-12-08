@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzeria - La Napoletana</title>
+    <link rel="stylesheet" href="/Index/style.css" async>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/menu-left-alt.css' rel='stylesheet'>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="icon" href="/images/pizza_logo.png">
+</head>
+<body> 
+    <header class="grid">
+                <i class="fa-solid fa-bars menu" id="menu"></i>
+                <a href="/Index/index.html"><img src="/images/Logo.svg" alt="la napolitana" srcset=""></a>
+                <nav id="Menu">
+                    <a href="/Index/index.html">Home</a>
+                    <a href="/Our Pizzas/our_pizzas.html">Our Pizzas</a>
+                    <a href="/About Us/about us.html">About Us</a>
+                    <a href="/Contact/contact.html">Contact</a>
+                </nav>
+                <div class="account">
+                    <a class="searchBtn">
+                        <input type="text" name="search" placeholder="Search.." style="display: none;" id="searchInput" autofocus>
+                        <i class="fa-solid fa-magnifying-glass" onclick="openSearch()"></i>
+                        
+                    </a>
+                    
+                    <a class="user"><i class="fa-solid fa-user"></i></a>
+                    <a class="shop" href="/Cart/cart.html" onclick="cartClicked()">
+                        <i class="fa-solid fa-cart-shopping "></i>
+                        <div class="cart-indicator" id="cart-indicator"></div>
+                    </a>
+                </div>        
+    </header>   
+    <main class="grid"> 
+        <div class="grid background">
+            <div class="grid text">
+                <img src="/images/Logo.svg" alt="la napolitana" srcset=""> 
+                <p>Indulge your senses in an authentic Italian experience at La Napolitana, where passion meets perfection in every slice. Nestled in the heart of flavor, our pizzeria is a haven for pizza enthusiasts seeking the true taste of Naples.</p>
+            </div>    
+        </div> 
+
+        <div class="grid background2">
+            <div class="grid text">
+                <h1>Enjoy!</h1>
+                <p> Ready to embark on a taste adventure? Let's savor every moment and relish the symphony of flavors awaiting us in our pizza. From the first bite to the last cheesy stretch, let's enjoy the crispy crust, the rich tomato sauce, and the perfect blend of toppings. It's not just a meal; it's a celebration of indulgence and satisfaction. So, here's to good company, great conversation, and the simple joy of enjoying our pizza together. Let the feast begin!</p>
+            </div>    
+        </div> 
+
+    </main>
+
+
+    <section id="section" class="grid">
+        <h1 id="title">Our Delicious Pizzas</h1>
+        <div class="grid list">     
+            <div class="grid card" id="card" data-key="1">
+                <img src="/images/Margherita.webp" alt="Delicious Pizza">
+                <div class="card-content grid">
+                    <div class="card-title">
+                        <h2>The</h2>
+                        <h1>Margherita</h1>
+                    </div>
+
+                    <b class="price">169:-</b>
+                    
+                    <input type="number" class="count" min="1" max="10" value="1">
+
+                    <button class="view_product" onclick="changeLocation()">View Product</button>
+                    <button class="add_to_cart" onclick="add(event)" type="button">Add To Cart</button>
+                </div>
+            </div>
+
+            <div class="grid card" data-key="2">
+                <img src="/images/Pepperoni.webp" alt="Delicious Pizza">
+                <div class="card-content grid">
+                    <div class="card-title">
+                        <h2>The</h2>
+                        <h1>Pepperoni</h1>
+                    </div>
+                    <b class="price">169:-</b>
+                    <input type="number" class="count" min="1" max="10" value="1">
+                    <button class="view_product" href="pepperoni.html">View Product</button>
+                    <button class="add_to_cart" onclick="add(event)" type="button">Add To Cart</button>
+                </div>
+            </div>
+
+            <div class="grid card" data-key="3">
+                <img src="/images/bbq.webp" alt="Delicious Pizza">
+                <div class="card-content grid" >
+                    <div class="card-title">
+                        <h2>The</h2>
+                        <h1>BBQ</h1>
+                    </div>
+                    <b class="price">169:-</b>
+                    <input type="number" class="count" min="1" max="10" value="1">
+                    <button class="view_product">View Product</button>
+                    <button class="add_to_cart" onclick="add(event)" type="button">Add To Cart</button>
+                </div>
+            </div>
+
+            <div class="grid card" data-key="4">
+                <img src="/images/greek.webp" alt="Delicious Pizza">
+                <div class="card-content grid">
+                    <div class="card-title">
+                        <h2>The</h2>
+                        <h1>Greek</h1>
+                    </div>
+                    <b class="price">169:-</b>
+                    <input type="number" class="count" min="1" max="10" value="1">
+                    <button class="view_product">View Product</button>
+                    <button class="add_to_cart" onclick="add(event)" type="button">Add To Cart</button>
+                </div>
+            </div>
+
+            <div class="grid card" data-key="5">
+                <img src="/images/Hawaii.png" alt="Delicious Pizza">
+                <div class="card-content grid">
+                    <div class="card-title">
+                        <h2>The</h2>
+                        <h1>Hawaii</h1>
+                    </div>
+                    <b class="price">169:-</b>
+                    <input type="number" class="count" min="1" max="10" value="1">
+                    <button class="view_product">View Product</button>
+                    <button class="add_to_cart" onclick="add(event)" type="button">Add To Cart</button>
+                </div>
+            </div>
+
+            <div class="grid card" data-key="6">
+                <img src="/images/Kebab.webp" alt="Delicious Pizza">
+                <div class="card-content grid">
+                    <div class="card-title">
+                        <h2>The</h2>
+                        <h1>Kebab</h1>
+                    </div>
+                    <b class="price">169:-</b>
+                    <input type="number" class="count" min="1" max="10" value="1">
+                    <button class="view_product">View Product</button>
+                    <button class="add_to_cart" onclick="add(event)" type="button">Add To Cart</button>
+                </div>
+            </div>
+
+            <div class="grid card" data-key="7">
+                <img src="/images/Four cheese.webp" alt="Delicious Pizza">
+                <div class="card-content grid">
+                    <div class="card-title">
+                        <h2>The</h2>
+                        <h1>Four Cheese</h1>
+                    </div>
+                    <b class="price">169:-</b>
+                    <input type="number" class="count" min="1" max="10" value="1">
+                    <button class="view_product">View Product</button>
+                    <button class="add_to_cart" onclick="add(event)" type="button">Add To Cart</button>
+                </div>
+            </div>
+
+            <div class="grid card" data-key="8">
+                <img src="/images/sicillian.png" alt="Delicious Pizza">
+                <div class="card-content grid">
+                    <div class="card-title">
+                        <h2>The</h2>
+                        <h1>Sicillian</h1>
+                    </div>
+                    <b class="price">169:-</b>
+                    <input type="number" class="count" min="1" max="10" value="1">
+                    <button class="view_product">View Product</button>
+                    <button class="add_to_cart" onclick="add(event)" type="button">Add To Cart</button>
+                </div>
+            </div>
+
+            <div class="grid card" data-key="9">
+                <img src="/images/vegetarian.png" alt="Delicious Pizza">
+                <div class="card-content grid">
+                    <div class="card-title">
+                        <h2>The</h2>
+                        <h1>Vegetarian</h1>
+                    </div>
+                    <b class="price">169:-</b>
+                    <input type="number" class="count" min="1" max="10" value="1">
+                    <button class="view_product">View Product</button>
+                    <button class="add_to_cart" onclick="add(event)" type="button">Add To Cart</button>
+                </div>
+            </div>
+
+            <div class="grid card" data-key="10">
+                <img src="/images/Bianca.webp" alt="Delicious Pizza">
+                <div class="card-content grid">
+                    <div class="card-title">
+                        <h2>The</h2>
+                        <h1>Bianca</h1>
+                    </div>
+                    <b class="price">169:-</b>
+                    <input type="number" class="count" min="1" max="10" value="1">
+                    <button class="view_product">View Product</button>
+                    <button class="add_to_cart" onclick="add(event)" type="button">Add To Cart</button>
+                </div>
+            </div>
+
+            <div class="grid card" data-key="11">
+                <img src="/images/calzone.png" alt="Delicious Pizza">
+                <div class="card-content grid">
+                    <div class="card-title">
+                        <h2>The</h2>
+                        <h1>Calzone</h1>
+                    </div>
+                    <b class="price">89:-</b>
+                    <input type="number" class="count" min="1" max="10" value="1">
+                    <button class="view_product">View Product</button>
+                    <button class="add_to_cart" onclick="add(event)" type="button">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="grid">
+        <div class="location">
+            <h1>Find us</h1>
+            <a href="https://www.google.com/maps/place/J%C3%B6nk%C3%B6ping+University/@57.7785714,14.1592945,17z/data=!4m16!1m9!3m8!1s0x465a6deb8c8d3f63:0xaa4ecd2380a8ed79!2sJ%C3%B6nk%C3%B6ping+University!8m2!3d57.7785686!4d14.1618694!9m1!1b1!16zL20vMDlxdjFu!3m5!1s0x465a6deb8c8d3f63:0xaa4ecd2380a8ed79!8m2!3d57.7785686!4d14.1618694!16zL20vMDlxdjFu?entry=ttu" target=”_blank” >Gjuterigatan 5, 553 18 Jönköping</a>
+        </div>
+        <div class="socials">
+            <h1>Social Media</h1>
+            <a href="http://Facebook.com" target="_blank">
+                <i class="fa-brands fa-facebook">facebook</i>
+            </a>
+            <a href="http://instagram.com" target="_blank">
+                <i class="fa-brands fa-instagram">Instagram</i>
+            </a>
+        </div>
+        <div class="img">
+            <a href="/Index/index.html">
+                <img src="/images/Logo.svg" alt="" srcset="">
+            </a>
+        </div>
+    </footer>
+    <div class="grid nav-menu-mobile" id="nav-menu-mobile">
+        <div class="grid inside">
+            <i class="fa-solid fa-xmark closeBtn" onclick="closeMenu()"></i>
+            
+            <nav class="sideMenu">
+                <a href="/Index/index.html">Home</a>
+                <a href="/Our Pizzas/our_pizzas.html">Our Pizzas</a>
+                <a href="/About Us/about us.html">About Us</a>
+                <a href="/Contact/contact.html">Contact</a>
+            </nav>
+        </div>
+    </div> 
+</body>
+
+<script src="/Index/index.js"></script>
+<script src="https://kit.fontawesome.com/d7008077ec.js" crossorigin="anonymous"></script>
+</html>

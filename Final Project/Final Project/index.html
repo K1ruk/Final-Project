@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzeria</title>
+    <link rel="stylesheet" href="/Index/style.css" async>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/menu-left-alt.css' rel='stylesheet'>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="icon" href="pizza_logo.png">
+</head>
+<body>  
+    <div class="bg">
+        <main class="grid">
+
+        <div class="nav-overlay"></div>
+
+        <header class="grid">
+            <i class="fa-solid fa-bars menu" id="menu"></i>
+            <a href="/Index/index.html"><img src="/images/Logo.svg" alt="la napolitana" srcset=""></a>
+            <nav id="Menu">
+                <a href="/Index/index.html">Home</a>
+                <a href="/Our Pizzas/our_pizzas.html">Our Pizzas</a>
+                <a href="#">Here We Are</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+            </nav>
+
+            <div class="account">
+                <a class="searchBtn"><i class="fa-solid fa-magnifying-glass" onclick="openSearch()" ></i></a>
+                <input type="text" name="search" placeholder="Search.." style="display: none;" id="searchInput" autofocus>
+                <a class="user"><i class="fa-solid fa-user "></i></a>
+                <a class="shop" href="/Cart/cart.html" onclick="cartClicked()">
+                    <i class="fa-solid fa-cart-shopping "></i>
+                    <div class="cart-indicator" id="cart-indicator">0</div>
+                </a>
+            </div>
+        </header>
+
+        <img src="/images/Logo.svg" alt="la napolitana" srcset=""> 
+        <p>Indulge your senses in an authentic Italian experience at La Napolitana, where passion meets perfection in every slice. Nestled in the heart of flavor, our pizzeria is a haven for pizza enthusiasts seeking the true taste of Naples.</p>
+        </main>
+    </div> 
+
+    <section id="section" class="grid">
+        <h1 id="title">Our Delicious Pizzas</h1>
+        <div class="grid list">     
+            <div class="grid card" id="card" data-key="1">
+                <img src="/images/Margherita.webp" alt="Delicious Pizza">
+                <div class="card-content grid">
+                    <div class="card-title">
+                        <h2>The</h2>
+                        <h1>Margherita</h1>
+                    </div>
+
+                    <p><b>Toppings: Mozzarella, fresh basil</b> </p>
+                    <b class="price">169:-</b>
+                    
+                    <input type="number" class="count" min="1" value="1">
+
+                    <button class="view_product">View Product</button>
+                    <button class="add_to_cart" onclick="add(event)" type="button">Add To Cart</button>
+                </div>
+            </div>
+
+            <div class="grid card" data-key="2">
+                <img src="/images/Pepperoni.webp" alt="Delicious Pizza">
+                <div class="card-content grid">
+                    <div class="card-title">
+                        <h2>The</h2>
+                        <h1>Pepperoni</h1>
+                    </div>
+                    <p><b>Toppings: Mozzarella, pepperoni, oregano</b> </p>
+                    <b class="price">169:-</b>
+                    <input type="number" class="count" min="1" value="1">
+                    <button class="view_product" href="pepperoni.html">View Product</button>
+                    <button class="add_to_cart" onclick="add(event)" type="button">Add To Cart</button>
+                </div>
+            </div>
+
+            <div class="grid card" data-key="3">
+                <img src="/images/bbq.webp" alt="Delicious Pizza">
+                <div class="card-content grid" >
+                    <div class="card-title">
+                        <h2>The</h2>
+                        <h1>BBQ</h1>
+                    </div>
+                    <p><b>Toppings: Mozzarella, BBQ sauce, chicken, peppers, onions</b> </p>
+                    <b class="price">169:-</b>
+                    <input type="number" class="count" min="1" value="1">
+                    <button class="view_product">View Product</button>
+                    <button class="add_to_cart" onclick="add(event)" type="button">Add To Cart</button>
+                </div>
+            </div>
+
+            <div class="grid card" data-key="4">
+                <img src="/images/greek.webp" alt="Delicious Pizza">
+                <div class="card-content grid">
+                    <div class="card-title">
+                        <h2>The</h2>
+                        <h1>Greek</h1>
+                    </div>
+                    <p><b>Toppings: Mozzarella, feta, onions, tomatoes, olives, peppers</b> </p>
+                    <b class="price">169:-</b>
+                    <input type="number" class="count" min="1" value="1">
+                    <button class="view_product">View Product</button>
+                    <button class="add_to_cart" onclick="add(event)" type="button">Add To Cart</button>
+                </div>
+            </div>
+
+            <div class="grid card" data-key="5">
+                <img src="/images/Hawaii.png" alt="Delicious Pizza">
+                <div class="card-content grid">
+                    <div class="card-title">
+                        <h2>The</h2>
+                        <h1>Hawaii</h1>
+                    </div>
+                    <p><b>Toppings: Mozzarella, ham, pineapple</b> </p>
+                    <b class="price">169:-</b>
+                    <input type="number" class="count" min="1" value="1">
+                    <button class="view_product">View Product</button>
+                    <button class="add_to_cart" onclick="add(event)" type="button">Add To Cart</button>
+                </div>
+            </div>
+
+            <div class="grid card" data-key="6">
+                <img src="/images/Kebab.webp" alt="Delicious Pizza">
+                <div class="card-content grid">
+                    <div class="card-title">
+                        <h2>The</h2>
+                        <h1>Kebab</h1>
+                    </div>
+                    <p><b>Toppings: Kebab, garlic sauce, garlic sauce, peppers</b> </p>
+                    <b class="price">169:-</b>
+                    <input type="number" class="count" min="1" value="1">
+                    <button class="view_product">View Product</button>
+                    <button class="add_to_cart" onclick="add(event)" type="button">Add To Cart</button>
+                </div>
+            </div>
+
+            <div class="grid card" data-key="7">
+                <img src="/images/Four cheese.webp" alt="Delicious Pizza">
+                <div class="card-content grid">
+                    <div class="card-title">
+                        <h2>The</h2>
+                        <h1>Four Cheese</h1>
+                    </div>
+                    <p><b>Toppings: Mozzarella, parmesan, gorgonzola, Fontina</b> </p>
+                    <b class="price">169:-</b>
+                    <input type="number" class="count" min="1" value="1">
+                    <button class="view_product">View Product</button>
+                    <button class="add_to_cart" onclick="add(event)" type="button">Add To Cart</button>
+                </div>
+            </div>
+
+            <div class="grid card" data-key="8">
+                <img src="/images/sicillian.png" alt="Delicious Pizza">
+                <div class="card-content grid">
+                    <div class="card-title">
+                        <h2>The</h2>
+                        <h1>Sicillian</h1>
+                    </div>
+                    <p><b>Toppings: Mozzarella, garlic, parmesan, oregano, pepperoni, ham</b> </p>
+                    <b class="price">169:-</b>
+                    <input type="number" class="count" min="1" value="1">
+                    <button class="view_product">View Product</button>
+                    <button class="add_to_cart" onclick="add(event)" type="button">Add To Cart</button>
+                </div>
+            </div>
+
+            <div class="grid card" data-key="9">
+                <img src="/images/vegetarian.png" alt="Delicious Pizza">
+                <div class="card-content grid">
+                    <div class="card-title">
+                        <h2>The</h2>
+                        <h1>Vegetarian</h1>
+                    </div>
+                    <p><b>Toppings: Mozzarella, mushrooms, olives, peppers, brocoli, zucchini</b> </p>
+                    <b class="price">169:-</b>
+                    <input type="number" class="count" min="1" value="1">
+                    <button class="view_product">View Product</button>
+                    <button class="add_to_cart" onclick="add(event)" type="button">Add To Cart</button>
+                </div>
+            </div>
+
+            <div class="grid card" data-key="10">
+                <img src="/images/Bianca.webp" alt="Delicious Pizza">
+                <div class="card-content grid">
+                    <div class="card-title">
+                        <h2>The</h2>
+                        <h1>Bianca</h1>
+                    </div>
+                    <p><b>Toppings: Mozzarella, ricotta, parmesan, fontina, herbs, garlic base</b> </p>
+                    <b class="price">169:-</b>
+                    <input type="number" class="count" min="1" value="1">
+                    <button class="view_product">View Product</button>
+                    <button class="add_to_cart" onclick="add(event)" type="button">Add To Cart</button>
+                </div>
+            </div>
+
+            <div class="grid card" data-key="11">
+                <img src="/images/calzone.png" alt="Delicious Pizza">
+                <div class="card-content grid">
+                    <div class="card-title">
+                        <h2>The</h2>
+                        <h1>Calzone</h1>
+                    </div>
+                    <p><b>Toppings: Mozzarella, basil, sausage, oregano, onions, peppers</b> </p>
+                    <b class="price">89:-</b>
+                    <input type="number" class="count" min="1" value="1">
+                    <button class="view_product">View Product</button>
+                    <button class="add_to_cart" onclick="add(event)" type="button">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="grid nav-menu-mobile" id="nav-menu-mobile">
+        <div class="grid inside">
+            <i class="fa-solid fa-xmark closeBtn" onclick="closeMenu()"></i>
+            
+            <nav class="sideMenu">
+                <a href="#">Order Here</a>
+                <a href="#">Our Pizzas</a>
+                <a href="#">Here We Are</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+    </div> 
+</body>
+
+<script src="/Index/index.js"></script>
+<script src="https://kit.fontawesome.com/d7008077ec.js" crossorigin="anonymous"></script>
+</html>

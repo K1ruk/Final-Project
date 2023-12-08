@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Margherita</title>
+    <link rel="stylesheet" href="/Product/margherita/margherita.css">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/menu-left-alt.css' rel='stylesheet'>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="icon" href="/images/pizza_logo.png">
+
+</head>
+<body>
+    <header class="grid">
+        <i class="fa-solid fa-bars menu" id="menu"></i>
+        <a href="/Index/index.html"><img src="/images/Logo.svg" alt="la napolitana" srcset=""></a>
+        <nav id="Menu">
+            <a href="/Index/index.html">Home</a>
+            <a href="/Our Pizzas/our_pizzas.html">Our Pizzas</a>
+            <a href="/About Us/about us.html">About Us</a>
+            <a href="/Contact/contact.html">Contact</a>
+        </nav>
+        <div class="account">
+            <a class="searchBtn">
+                <input type="text" name="search" placeholder="Search.." style="display: none;" id="searchInput" autofocus>
+                <i class="fa-solid fa-magnifying-glass" onclick="openSearch()" ></i>
+            </a>
+            <a class="user"><i class="fa-solid fa-user "></i></a>
+            <a class="shop" href="/Cart/cart.html" onclick="cartClicked()">
+                <i class="fa-solid fa-cart-shopping "></i>
+                <div class="cart-indicator" id="cart-indicator">0</div>
+            </a>
+        </div>        
+    </header>
+
+    <main class="grids">
+        <section class="slideshow_container grid">
+            <div class="mySlides firstPizza">
+              <img src="/images/Margherita.webp" alt="Delicious Pizza">
+            </div>
+
+            <div class="grid image_container">
+                <div class="mySlides">
+                <img src="/images/margherita1.jpg" alt="Delicious Pizza">
+                </div>
+        
+                <div class="mySlides">
+                  <img src="/images/margherita2.jpg" alt="Delicious Pizza">
+                </div>
+            
+                <div class="mySlides">
+                  <img src="/images/margherita3.jpg" alt="Delicious Pizza">
+                </div>
+            </div>        
+        </section>
+
+        <section class="text_container grid">
+            <div class="grid card-title">
+                <h2>The</h2>
+                <h1>Margherita</h1>
+                <p>Introducing Our Margherita Pizza! Indulge in the simplicity of perfection with our Margherita pizza at La Napolitana. Crafted with love, it features:
+                <br>
+                <br>
+                <b>Fresh, sun-kissed tomatoes</b><br>
+
+                <b>Creamy, dreamy mozzarella</b><br>
+
+                <b>Fragrant basil leaves</b> <br><br>
+                All crowned with a drizzle of extra virgin olive oil. Wood-fired for that perfect crispy crust. Pure, classic, and utterly delicious. Experience the timeless charm of our Margherita – where every bite tells a story of fresh ingredients and authentic flavor. Buon Appetito!</p>            
+                    
+                <b class="price">169:-</b>   
+                <input type="number" class="count" min="1" max="10" value="1">
+                <button class="add_to_cart" onclick="add(event)" type="button">Add To Cart</button>  
+            </div>        
+        </section>
+    </main>            
+    <footer class="grid">
+        <div class="location">
+            <h1>Find us</h1>
+            <a href="https://www.google.com/maps/place/J%C3%B6nk%C3%B6ping+University/@57.7785714,14.1592945,17z/data=!4m16!1m9!3m8!1s0x465a6deb8c8d3f63:0xaa4ecd2380a8ed79!2sJ%C3%B6nk%C3%B6ping+University!8m2!3d57.7785686!4d14.1618694!9m1!1b1!16zL20vMDlxdjFu!3m5!1s0x465a6deb8c8d3f63:0xaa4ecd2380a8ed79!8m2!3d57.7785686!4d14.1618694!16zL20vMDlxdjFu?entry=ttu" target=”_blank” >Gjuterigatan 5, 553 18 Jönköping</a>
+        </div>
+        <div class="socials">
+            <h1>Social Media</h1>
+            <a href="http://Facebook.com" target="_blank">
+                <i class="fa-brands fa-facebook">facebook</i>
+            </a>
+            <a href="http://instagram.com" target="_blank">
+                <i class="fa-brands fa-instagram">Instagram</i>
+            </a>
+        </div>
+        <div class="img">
+            <a href="/Index/index.html">
+                <img src="/images/Logo.svg" alt="" srcset="">
+            </a>
+        </div>
+    </footer>
+    </div>
+    <div class="grid nav-menu-mobile" id="nav-menu-mobile">
+        <div class="grid inside">
+            <i class="fa-solid fa-xmark closeBtn" onclick="closeMenu()"></i>
+            
+            <nav class="sideMenu">
+                <a href="/Index/index.html">Home</a>
+                <a href="/Our Pizzas/our_pizzas.html">Our Pizzas</a>
+                <a href="/About Us/about us.html">About Us</a>
+                <a href="/Contact/contact.html">Contact</a>
+            </nav>
+        </div>
+    </div>
+</body>
+<script src="/Index/index.js"></script>
+<script src="https://kit.fontawesome.com/d7008077ec.js" crossorigin="anonymous"></script>
+
+</html>
