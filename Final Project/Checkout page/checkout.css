@@ -22,6 +22,9 @@ body, html{
 body{
     margin: 0;
 }
+main{
+    background-color: #ffffff;
+}
 .btn {
     background-color: transparent;
     border: none;
@@ -35,109 +38,187 @@ body{
     grid-template-columns: repeat(12, 1fr);
 }
 
-main{
-    min-height: 100%;
-    justify-content: space-evenly;
-}
-main > header{
+
+header{
     padding: 10px 15px;
     grid-column: span 12;
     width: 100%;
-    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.35) 100%);
-}
+    background-color: #f7f7f7;
 
-main > p{
-    grid-column: 3 / span 8;
-    justify-self: center;
-    color: white;
-}
-
-main > nav > a{
-    margin-top: 25vh;
-    grid-column: span 12;
-    justify-self: center;
-    font-size: 4.5vw;
-}
-
-header > .menu{
-    display: none;
 }
 header > a{
-    width: 15vw;
-    grid-column: span 2;
     margin-top: 10px;
-}
-header > nav{
-    grid-column: 4 / span 6;
-    justify-self: center;
+    width: 15vw;
+    grid-column: 2 / span 4;
     align-self: center;
 }
-header > nav > a{
-    margin-right: 10px;
-    font-size: 21px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #1a1e1b;
-    user-select: none;
-    padding: 10px;
-
-}
-header > nav > a:hover{
-    transition: 0.2s;
-    color: #d92730;
-    
-}
-
-header > .account{
-    grid-column: span 3;
-    justify-self: right;
+header > h1{
+    grid-column: 10 / span 3;
+    margin: 0;
+    font-size: 24px;
     align-self: center;
 }
-header > .account > .searchBtn, .user{
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    margin-right: 10px;
-    font-size: 25px;
+
+main > section{
+    margin-top: 20px;
+    grid-column: 2 / span 10;
+}
+main > section > .list{
+    grid-column: span 12;
+}
+section > .list > .card{
+    grid-column: span 6;
+}
+section > .list > .card > #login{
+    grid-column: span 11;
+}
+section > .list > .card > #cart-content{
+    grid-column: span 12;
+}
+section > .list > #summary{
+    grid-column: span 10;
+}
+section > .list > .card > #payment{
+    grid-column: span 11;
+}
+section > .list > .card > #delivery{
+    grid-column: span 8;
+    padding: 10px 20px;
+}
+section > .list > .card > .card-content > #product{
+    grid-column: span 12;
+}
+section > .list > .card > h1{
+    grid-column: span 12;
+}
+section > .list > .card > .card-content {
+    background-color: #fff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-header > .account >.shop{
-    margin-right: 0;
-    font-size: 25px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
+section > .list > .card > .card-content > h1,h2{
+    margin: 0;
+    grid-column: span 12;
+    padding: 10px 20px;
 }
-
-header > .account > input{
+section > .list > .card > #login > input{
+    padding: 10px 20px;
+    margin: 10px 20px;
+    grid-column: span 12;
+}
+section > .list > .card > #login > button{
+    cursor: pointer;
+    color: #fff;
     font-size: 20px;
-    border-radius: 10px;
-    background-color: #fdfaf3;
+    text-transform: uppercase;
+    background-color: #1a1e1b;
+    padding: 10px 20px;
+    margin: 10px 20px;
+    grid-column: span 12;
 }
-header > .account > input:focus{
-    outline: none !important;
-    border-color: #1a1e1b;
-    box-shadow: 0 0 10px #1a1e1b;
+section > .list > .card > .card-content > .cardOptionContainer{
+    grid-column: span 12;
+}
+section > .list > .card > .card-content > #email{
+    margin-top: 20px;
+}
 
-    transition: 0.4s ease-in-out;
+section > .list > .card > .card-content > #passwordContainer > #password{
+    grid-column: span 12;
+    padding: 10px 20px;
+    margin: 10px 20px;
 }
-header > .account > input::placeholder{
-    font-style: italic;
-    padding-left: 5px;
+
+section > .list > .card > .card-content > p{
+    grid-column: span 12;
+    margin: 0;
+    justify-self: center;
 }
-.nav-menu-mobile{
-    display: none;
+
+section > .list > .card > .card-content > .delivery{
+    grid-column: span 12;
 }
-.cart-indicator {
-    position: absolute;
-    top: 10px;
-    right: 5px;
-    background-color: gray;
+section > .list > .card > .card-content > .delivery > .inputContainer{
+    grid-column: span 12;
+}
+section > .list > .card > .card-content > .delivery > .inputContainer > input{
+    padding-left: 10px;
+    align-self: center;
+}
+section > .list > .card > .card-content > .delivery > .inputContainer > p{
+    grid-column: span 8;
+    align-self: center;
+}
+section > .list > .card > .card-content > .delivery > .inputContainer > b{
+    grid-column: span 3;
+    justify-self: end;
+    padding-right: 10px;
+    font-weight: bold;
+    align-self: center;
+}
+.price, .quantity, .subtotal{
+    align-self: center;
+    grid-column: span 2;
+}
+main > section > .list > .card > .titles{
+    font-weight: bold;
+    grid-column: span 12;
+} 
+.headTitle{
+    grid-column: span 6;
+}
+#summary > button{
+    cursor: pointer;
+    border: none;
+    color: #f7f7f7;
+    background-color: #1a1e1b;
+    margin-top: 10px;
+    grid-column: 11 / span 2;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+footer{
+    background-color: #1a1e1b;
+}
+footer > .location{
+    grid-column: span 4;
+    justify-self: center;
+}
+footer > .location > h1, footer > .location > a{
     color: white;
-    padding: 5px 10px;
-    border-radius: 50%;
-    font-size: 12px;
+    text-decoration: none;
 }
+footer > .socials{
+    grid-column: span 3;
+    justify-self: center;
+}
+footer > .socials > a{
+    margin-bottom: 10px;
+    display: block;
+}
+footer > .socials > h1{
+    color: white;
+}
+footer > .socials > a > i{
+    color: white;
+}
+footer > .img{
+    align-self: center;
+    grid-column: 10 / span 2;
+}
+
+footer > .img > a > img{ 
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(323deg) brightness(105%) contrast(101%);;   
+}
+.fa-facebook:before {
+    padding-right: 10px;
+}
+.fa-instagram::before{
+    padding-right: 10px;
+}
+
+
 
 @media (max-width: 1440px){
     header > nav > a {
@@ -180,6 +261,9 @@ header > .account > input::placeholder{
         font-size: 18px;
     }
 
+    section > .list > .card > .card-content > p{
+        grid-column: 2 /span 10;
+    }
     
 }
 
@@ -226,9 +310,58 @@ header > .account > input::placeholder{
 
     header > .account > .user{
         display: none;
+    }      
+    
+    section > .list > .card{
+        grid-column: span 12;
+    }
+    section > .list > .card > #login{
+        grid-column: span 12;
+    }
+    section > .list > .card > #delivery{
+        grid-column: span 12;
+    }
+    section > .list > .card > #payment{
+        grid-column: span 12;
+    }
+    section > .list > #summary{
+        grid-column: span 12;
+    }
+    section > .list > .card > h1{
+        grid-column: span 12;
+        justify-self: center;
     }
 
+    section > .list > .card > .card-content {
+        grid-column: span 12;
+        background-color: #fff;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        justify-self:center;
+    }
+        
+    section > .list > .card > .card-content > p{
+        font-size: 14px;
+    }
+    section > .list > .card > .card-content > h2{
+        font-size: 20px;
+        justify-self: start;
+    }
+  
 
+    footer{
+        row-gap: 20px;
+    }
+    footer > .location{
+        grid-column: span 6;
+    }
+
+    footer > .socials{
+        grid-column: span 6;
+    }  
+
+    footer > .img{
+        grid-column: 2 / span 10;
+    }
     .nav-menu-mobile{
         display: block;
         width: 90%;

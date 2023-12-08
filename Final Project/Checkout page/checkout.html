@@ -9,39 +9,116 @@
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="icon" href="pizza_logo.png">
 </head>
-<body>  
-        <main class="grid">
-
-        <div class="nav-overlay"></div>
-
-        <header class="grid">
-            <i class="fa-solid fa-bars menu" id="menu"></i>
-            <a href="/Index/index.html"><img src="/images/Logo.svg" alt="la napolitana" srcset=""></a>
-            <nav id="Menu">
-                <a href="/Index/index.html">Home</a>
-                <a href="/Our Pizzas/our_pizzas.html">Our Pizzas</a>
-                <a href="#">Find Us Here</a>
-                <a href="#">About Us</a>
-                <a href="#">Contact</a>
-            </nav>
-
-            <div class="account">
-                <a class="searchBtn"><i class="fa-solid fa-magnifying-glass" onclick="openSearch()" ></i></a>
-                <input type="text" name="search" placeholder="Search.." style="display: none;" id="searchInput" autofocus>
-                <a class="user"><i class="fa-solid fa-user "></i></a>
-                <a class="shop" href="/Cart/cart.html" onclick="cartClicked()">
-                    <i class="fa-solid fa-cart-shopping "></i>
-                    <div class="cart-indicator" id="cart-indicator">0</div>
-                </a>
-            </div>
-        </header>
-        </main>
-
-        <section>
+<body>          
+    <header class="grid">
+            <a href="/Index/index.html"><img src="/images/Logo.svg" alt="la napolitana" srcset=""></a>            
             <h1>Checkout</h1>
-        </section>
+    </header>
+
+    <main class="grid">
+        <section class="grid">
+            
+            <div class="grid list">
+                <div class="grid card" >
+                    <h1>1. Login</h1>
+                    <form class="grid card-content" id="login">
+                        <input type="email" name="email" id="email" placeholder="Email" required>
+                        <input type="password" name="password" id="password" placeholder="Password" required>
+                        <p>Not a member yet? Sign Up <a href="¤">Here</a></p>
+                        <button type="submit">Login</button>
+                    </form>
+                </div>                
+                
+                <div class="grid card" >
+                    <h1>2. Delivery</h1>
+                    <div class="grid card-content" id="delivery">
+                        <h2>Delivery Options</h2>
+                        <div class="grid delivery">
+                            <div class="grid inputContainer">
+                                <input type="radio" name="drone" id="Standard">
+                                <p>Standard Delivery</p>
+                                <b>Free</b>
+                            </div>
+                            <div class="grid inputContainer">
+                                <input type="radio" name="drone" id="Priority">
+                                <p>Priority Delivery</p>
+                                <b>59kr</b>
+                            </div>
+                            <div class="grid inputContainer">
+                                <input type="radio" name="drone" id="Express">
+                                <p>Express Delivery</p>
+                                <b>109kr</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid card" >
+                    <h1>3. Payment</h1>
+                    <div class="grid card-content" id="payment">
+                        <h2>Payment Options</h2>
+                        <div class="grid cardOptionContainer" onclick="OpenCard()">
+                            <input type="radio" name="card" id="Standard">
+                            <p>Card</p>
+                        </div>
+                        <div class="grid cardOptionContainer">
+                            <input type="radio" name="card" id="Priority" onclick="OpenPaypal()">
+                            <p>Paypal</p>
+
+                        </div>
+                        <div class="grid cardOptionContainer">
+                            <input type="radio" name="card" id="Express" onclick="OpenSwish()">
+                            <p>Swish</p>
+
+                        </div>
+                        <div class="grid cardOptionContainer">
+                            <input type="radio" name="card" id="Express" onclick="OpenKlarna()">
+                            <p>Klarna</p>
+
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="grid card" id="summary">
+                    <h1>4. Summary</h1>
+                    <div class="grid titles">
+                        <b class="headTitle">Item</b>
+                        <b class="price">Price</b>
+                        <b class="quantity">Quantity</b>
+                        <b class="total">Subtotal</b>
+                    </div>
+                    <div class="grid card-content" id="cart-content"></div>
+                    <button type="submit" onclick="Payment()">Proceed To Payment</button>
+                </div>
+
+                
+            </div>
+
+
+        </section> 
+    </main>
+    <footer class="grid">
+        <div class="location">
+            <h1>Find us</h1>
+            <a href="https://www.google.com/maps/place/J%C3%B6nk%C3%B6ping+University/@57.7785714,14.1592945,17z/data=!4m16!1m9!3m8!1s0x465a6deb8c8d3f63:0xaa4ecd2380a8ed79!2sJ%C3%B6nk%C3%B6ping+University!8m2!3d57.7785686!4d14.1618694!9m1!1b1!16zL20vMDlxdjFu!3m5!1s0x465a6deb8c8d3f63:0xaa4ecd2380a8ed79!8m2!3d57.7785686!4d14.1618694!16zL20vMDlxdjFu?entry=ttu" target=”_blank” >Gjuterigatan 5, 553 18 Jönköping</a>
+        </div>
+        <div class="socials">
+            <h1>Social Media</h1>
+            <a href="http://Facebook.com" target="_blank">
+                <i class="fa-brands fa-facebook">facebook</i>
+            </a>
+            <a href="http://instagram.com" target="_blank">
+                <i class="fa-brands fa-instagram">Instagram</i>
+            </a>
+        </div>
+        <div class="img">
+            <a href="/Index/index.html">
+                <img src="/images/Logo.svg" alt="" srcset="">
+            </a>
+        </div>
+    </footer>
 </body>
 
-<script src="/Index/index.js"></script>
+<script src="/Checkout page/checkout.js"></script>
 <script src="https://kit.fontawesome.com/d7008077ec.js" crossorigin="anonymous"></script>
 </html>
